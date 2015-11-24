@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Application Routing Table</h1>
+{% for route in routes %}
+<p><b>{{ route }}</b></p>
+{% endfor %}
+{% endblock %}
