@@ -9,8 +9,11 @@ Werkzeug==0.11.1
 cov-core==1.15.0
 coverage==4.0.3
 dominate==2.1.16
+foo==0.0
 itsdangerous==0.24
 pep8==1.6.2
 py==1.4.30
 pytest==2.8.3
+pytest-cov==2.2.0
+test-pkg==0.0
 visitor==0.1.2
