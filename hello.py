@@ -26,6 +26,7 @@ def loadUsers():
             line = f.readline()
     g.userdict = userdict
 
+
 @app.route('/routes')
 def routes():
     out = []
@@ -34,17 +35,21 @@ def routes():
         out.append(str(r))
     return render_template('routes.html', routes=out)
 
+
 @app.route('/')
 def index():
     return render_template("index.html")
+
 
 @app.route('/healthcheck')
 def healthcheck():
     return "Status OK"
 
+
 @app.route('/user/<name>')
 def user(name):
     return '<h1>Hello %s!</h1>' % name
+
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
@@ -63,6 +68,7 @@ def login():
                 flash('Login Incorrect')
                 return render_template('login_form.html', form=form, username=username, password=password)
     return render_template('login_form.html', form=form, username=username, password=password)
+
 
 @app.route('/listusers')
 def listUsers():
