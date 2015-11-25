@@ -1,6 +1,6 @@
 from flask import Flask
-from flask import request, g, session, render_template,
-                redirect, url_for, flash
+from flask import request, g, session, render_template
+                , redirect, url_for, flash
 from flask.ext.wtf import Form
 from flask.ext.bootstrap import Bootstrap
 from wtforms import StringField, SubmitField, PasswordField
