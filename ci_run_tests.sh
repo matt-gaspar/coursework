@@ -9,3 +9,6 @@ pip install -r requirements.txt
 # Code coverage
 coverage xml
 coverage erase
+
+# Code analysis
+pep8 hello.py > pep8_output.txt
