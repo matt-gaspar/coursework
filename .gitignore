@@ -61,3 +61,6 @@ target/
 # vagrant
 *.vagrant/
 
+# Test outputs
+test-reports/
+test-reports/*
