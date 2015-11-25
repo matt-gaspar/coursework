@@ -14,5 +14,4 @@ pep8==1.6.2
 py==1.4.30
 pytest==2.8.3
 pytest-cov==2.2.0
-test-pkg==0.0
 visitor==0.1.2
