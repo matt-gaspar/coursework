@@ -12,8 +12,8 @@ bootstrap = Bootstrap(app)
 
 
 class LoginForm(Form):
-    username = StringField('User Name :', validators=[Required()])
-    password = PasswordField('Password :', validators=[Required()])
+    username = StringField('User Name :', validators = [Required()])
+    password = PasswordField('Password :', validators = [Required()])
     submit = SubmitField('Login')
 
 
