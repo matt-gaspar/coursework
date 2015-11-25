@@ -1,6 +1,5 @@
 from flask import Flask
-from flask import request, g, session, render_template
-                , redirect, url_for, flash
+from flask import request, g, session, render_template, redirect, url_for, flash
 from flask.ext.wtf import Form
 from flask.ext.bootstrap import Bootstrap
 from wtforms import StringField, SubmitField, PasswordField
@@ -13,18 +12,18 @@ bootstrap = Bootstrap(app)
 
 
 class LoginForm(Form):
-    username = StringField('User Name :', validators = [Required()])
-    password = PasswordField('Password :', validators = [Required()])
+    username = StringField('User Name :', validators=[Required()])
+    password = PasswordField('Password :', validators=[Required()])
     submit = SubmitField('Login')
 
 
 @app.before_request
 def loadUsers():
     userdict = {}
-    with open("users.txt",'rt') as f:
+    with open("users.txt", 'rt') as f:
         line = f.readline()
         while line:
-            [username,password] = line.rstrip().split(',')
+            [username, password] = line.rstrip().split(',')
             userdict[username] = password
             line = f.readline()
     g.userdict = userdict
@@ -54,7 +53,7 @@ def user(name):
     return '<h1>Hello %s!</h1>' % name
 
 
-@app.route('/login', methods = ['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     username = None
     password = None
