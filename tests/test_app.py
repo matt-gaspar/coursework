@@ -8,3 +8,11 @@ class TestRoutes(unittest.TestCase):
 
     def test_healthcheck(self):
         self.assertEqual((self.app.get('/healthcheck')).status, '200 OK')
+
+    def test_user_route(self):
+        resp = self.app.get('/user/test')
+        assert 'test' in resp.data.decode('utf-8')
+
+    def test_login_route(self):
+        resp = self.app.get('/login')
+        self.assertEqual(resp.status, '200 OK')

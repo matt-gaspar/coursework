@@ -1,3 +1,4 @@
+admin@company.com,admin
 matt@company.com,password
 bob@company.com,password
 jane@company.com,password
