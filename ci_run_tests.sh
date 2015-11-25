@@ -11,4 +11,4 @@ coverage xml
 coverage erase
 
 # Code analysis
-pep8 hello.py > pep8_output.txt
+pep8 hello.py
