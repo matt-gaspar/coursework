@@ -10,10 +10,12 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = '12345678'
 bootstrap = Bootstrap(app)
 
+
 class LoginForm(Form):
-    username = StringField('User Name :', validators = [Required()])
-    password = PasswordField('Password :', validators = [Required()])
+    username = StringField('User Name :', validators=[Required()])
+    password = PasswordField('Password :', validators=[Required()])
     submit = SubmitField('Login')
+
 
 @app.before_request
 def loadUsers():
