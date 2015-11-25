@@ -5,3 +5,7 @@ pip install -r requirements.txt
 
 # Run Unit tests
 ./run_tests.sh
+
+# Code coverage
+coverage xml
+coverage rm
