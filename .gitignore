@@ -66,3 +66,4 @@ test-reports/
 test-reports/*
 coverage.xml
 .coverage
+htmlcov/

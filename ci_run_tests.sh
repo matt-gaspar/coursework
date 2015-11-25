@@ -8,4 +8,4 @@ pip install -r requirements.txt
 
 # Code coverage
 coverage xml
-coverage rm
+coverage -rm
